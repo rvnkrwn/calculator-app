@@ -1,74 +1,88 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    height: 100dvh;
-    width: 100dvw;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100dvh;
+  width: 100dvw;
+  align-items: center;
+  justify-content: center;
 }
 
 .calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  max-width: 100%;
+  gap: 2rem;
+  border: 1px solid black;
+  padding: 20px;
+  box-shadow: 15px 15px 1px black;
+}
+
+h1#title {
+  text-align: center;
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+}
+
+p#description {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#display {
+  width: 100%;
+  font-size: x-large;
+  text-align: end;
+  padding: 15px 10px;
+  font-weight: 600;
+  border: 1px solid black;
+  box-shadow: 10px 10px 1px black;
+  background: none;
+  color: black;
+}
+
+.buttons {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.buttons input[type="button"] {
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 1px black;
+  background: none;
+  cursor: pointer;
+}
+
+.buttons input[type="button"]:nth-child(4n),
+.buttons input[type="button"]:nth-last-child(1) {
+  background: rgb(254, 254, 103);
+}
+
+.buttons input[type="button"]:not(:nth-child(n + 4)) {
+  background: rgb(206, 206, 196);
+}
+
+#zero {
+  grid-row: 5;
+  grid-column: 1 / span 2;
+}
+
+@media screen and (max-width: 450px) {
+  .calculator {
     display: flex;
     flex-direction: column;
     width: 400px;
     max-width: 100%;
     gap: 2rem;
-    border: 1px solid black;
+    border: none;
     padding: 20px;
-    box-shadow: 15px 15px 1px black;
-}
-
-h1#title {
-    text-align: center;
-    font-size: x-large;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-p#description {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#display {
-    width: 100%;
-    font-size: x-large;
-    text-align: end;
-    padding: 15px 10px;
-    font-weight: 600;
-    border: 1px solid black;
-    box-shadow: 10px 10px 1px black;
-    background: none;
-    color: black;
-}
-
-.buttons {
-    display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    gap: 1rem;
-}
-
-.buttons input[type="button"] {
-    padding: 10px;
-    border: 1px solid black;
-    box-shadow: 5px 5px 1px black;
-    background: none;
-    cursor: pointer;
-}
-
-.buttons input[type="button"]:nth-child(4n),  .buttons input[type="button"]:nth-last-child(1){
-    background: rgb(254, 254, 103);
-}
-
-.buttons input[type="button"]:not(:nth-child(n+4)) {
-    background: rgb(206, 206, 196);
-}
-
-#zero {
-    grid-row: 5;
-    grid-column: 1 / span 2;
+    box-shadow: none;
+  }
 }
