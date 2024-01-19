@@ -9,33 +9,61 @@
 </head>
 
 <body>
-    <div class="calculator">
+    <header>
         <h1 id="title">Calculator</h1>
         <p id="description">happy mathematics 😅😊😉</p>
-        <input type="text" id="display" disabled value="0">
-        <div class="buttons">
-            <input type="button" value="C" onclick="clearDisplay()">
-            <input type="button" value="⬅" onclick="backspace()">
-            <input type="button" value="%" onclick="appendToDisplay('%')">
-            <input type="button" value="÷" onclick="appendToDisplay('/')">
-            <input type="button" value="7" onclick="appendToDisplay('7')">
-            <input type="button" value="8" onclick="appendToDisplay('8')">
-            <input type="button" value="9" onclick="appendToDisplay('9')">
-            <input type="button" value="×" onclick="appendToDisplay('*')">
-            <input type="button" value="4" onclick="appendToDisplay('4')">
-            <input type="button" value="5" onclick="appendToDisplay('5')">
-            <input type="button" value="6" onclick="appendToDisplay('6')">
-            <input type="button" value="-" onclick="appendToDisplay('-')">
-            <input type="button" value="1" onclick="appendToDisplay('1')">
-            <input type="button" value="2" onclick="appendToDisplay('2')">
-            <input type="button" value="3" onclick="appendToDisplay('3')">
-            <input type="button" value="+" onclick="appendToDisplay('+')">
-            <input type="button" value="0" id="zero" onclick="appendToDisplay('0')">
-            <input type="button" value="." onclick="appendToDisplay('.')">
-            <input type="button" value="=" onclick="calculate()">
+        <br>
+        <div>
+            <p>
+                <strong><span id="name"></span>, Good Luck!!</strong>
+                <br>
+                <h1 id="score"></h1>
+                <strong>Your Score</strong>
+            </p>
         </div>
-    </div>
-
+    </header>
+    <main>
+        <div id="indicator">
+            <div id="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div id="number">
+                15
+            </div>
+        </div>
+        <div id="question">
+            <b>what is the value of x if the result&nbsp;<span id="tempQuestion" style="color: green;"></span></b>
+            <br>
+            <i>Retype the question with style a*x+b</i>
+        </div>
+        <div class="calculator">
+            <input type="text" id="display" disabled value="0">
+            <div class="buttons">
+                <input type="button" value="C" onclick="clearDisplay()">
+                <input type="button" value="⬅" onclick="backspace()">
+                <input type="button" value="%" onclick="appendToDisplay('%')">
+                <input type="button" value="÷" onclick="appendToDisplay('÷')">
+                <input type="button" value="7" onclick="appendToDisplay('7')">
+                <input type="button" value="8" onclick="appendToDisplay('8')">
+                <input type="button" value="9" onclick="appendToDisplay('9')">
+                <input type="button" value="×" onclick="appendToDisplay('×')">
+                <input type="button" value="4" onclick="appendToDisplay('4')">
+                <input type="button" value="5" onclick="appendToDisplay('5')">
+                <input type="button" value="6" onclick="appendToDisplay('6')">
+                <input type="button" value="-" onclick="appendToDisplay('-')">
+                <input type="button" value="1" onclick="appendToDisplay('1')">
+                <input type="button" value="2" onclick="appendToDisplay('2')">
+                <input type="button" value="3" onclick="appendToDisplay('3')">
+                <input type="button" value="+" onclick="appendToDisplay('+')">
+                <input type="button" value="0" id="zero" onclick="appendToDisplay('0')">
+                <input type="button" value="." onclick="appendToDisplay('.')">
+                <input type="button" value="=" onclick="calculate()">
+            </div>
+        </div>
+    </main>
     <script src="./main.js"></script>
 </body>
 
